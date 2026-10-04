@@ -1,191 +1,252 @@
-# WARNING: **wingetui<sub>•</sub>com** and **unigetui<sub>•</sub>com** are fake websites hosted by a third-party. please do NOT trust them
-<br>
+# 🎨 APPYness PackageHub
 
-## <img src="media/icon.png" height="40">Devolutions UniGetUI
+> **Developing Joy!** — A delightful, powerful package management desktop application by [APPYness](https://appyness.dev).
 
-> [!IMPORTANT]
-> **Major announcement:** UniGetUI has entered its next chapter with Devolutions.
-> Read the [blog post](https://devolutions.net/blog/2026/03/unigetui-enters-its-next-chapter-with-devolutions/) and the [official press release](https://www.globenewswire.com/news-release/2026/03/10/3253012/0/en/Devolutions-Acquires-UniGetUI-Strengthening-Security-and-Enterprise-Readiness.html).
+**PackageHub** is a modern WinUI 3 desktop application that brings joy and simplicity to software package management on Windows. Manage multiple package managers (WinGet, Scoop, Chocolatey, Pip, npm, and more) through one beautiful, intuitive interface—**developed by Vincent Kinney and the APPYness team with ❤️**.
 
-[![Downloads](https://img.shields.io/github/downloads/Devolutions/UniGetUI/total?style=for-the-badge)](https://github.com/Devolutions/UniGetUI/releases/latest/download/UniGetUI.Installer.exe)
-[![Release Version Badge](https://img.shields.io/github/v/release/Devolutions/UniGetUI?style=for-the-badge)](https://github.com/Devolutions/UniGetUI/releases)
-[![Issues Badge](https://img.shields.io/github/issues/Devolutions/UniGetUI?style=for-the-badge)](https://github.com/Devolutions/UniGetUI/issues)
-[![Closed Issues Badge](https://img.shields.io/github/issues-closed/Devolutions/UniGetUI?color=%238256d0&style=for-the-badge)](https://github.com/Devolutions/UniGetUI/issues?q=is%3Aissue+is%3Aclosed)<br>
-UniGetUI is an intuitive GUI for the most common CLI package managers on Windows 10 and 11, including [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/), [Scoop](https://scoop.sh/), [Chocolatey](https://chocolatey.org/), [pip](https://pypi.org/), [npm](https://www.npmjs.com/), [Bun](https://bun.sh/), [.NET Tool](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install), [PowerShell Gallery](https://www.powershellgallery.com/), and more.
-With UniGetUI, you can discover, install, update, and uninstall software from multiple package managers through one interface.
+---
 
-![image](https://github.com/user-attachments/assets/7cb447ca-ee8b-4bce-8561-b9332fb0139a)
-View more screenshots [here](#screenshots)
+## ✨ What is PackageHub?
 
-Check out the [Package Managers](#package-managers) section for more details!
+PackageHub transforms the complexity of managing multiple package managers into a seamless, delightful experience. Instead of remembering CLI syntax or juggling multiple tools, you get:
 
-**Disclaimer:** UniGetUI is not affiliated with the package managers it integrates with. Packages are provided by third parties, so review sources and publishers before installation.
+- **🎯 One Dashboard** – Discover, install, update, and uninstall packages from all your favorite package managers
+- **⚡ Lightning Fast** – Modern C# / .NET 10 / Windows App SDK architecture optimized for performance
+- **🌍 Multilingual** – Community-supported translations in 20+ languages
+- **🔧 Deep Integration** – Native support for WinGet, Scoop, Chocolatey, Pip, npm, .NET Tools, PowerShell Gallery, Cargo, and Vcpkg
+- **📦 Smart Bulk Operations** – Install, update, or remove multiple packages at once
+- **💾 Backup & Restore** – Export package lists and settings for quick setup on new machines
+- **🔐 Secure & Private** – Open source (MIT) with full transparency
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Devolutions/UniGetUI/dotnet-test.yml?branch=main&style=for-the-badge&label=Tests)<br>
+---
 
+## 🚀 Getting Started
 
-> [!CAUTION]
-> **The official website for UniGetUI is [https://devolutions.net/unigetui/](https://devolutions.net/unigetui/).**<br>
-> **The official source repository is [https://github.com/Devolutions/UniGetUI](https://github.com/Devolutions/UniGetUI).**<br>
-> **Any other website should be considered unofficial, despite what they may say.**
+### Installation
 
-🔒 Found a security issue? Please report it via the [Devolutions security page](https://devolutions.net/security/)
+Choose your preferred method:
 
-## Project stewardship
-
-UniGetUI was created by Martí Climent and is now maintained by Devolutions. The project remains free, open source, and MIT-licensed. Devolutions' stewardship brings long-term investment, structured governance, stronger security processes, and a roadmap for broader enterprise readiness while keeping UniGetUI standalone and community-driven.
-
-Read more in the [Devolutions announcement](https://devolutions.net/blog/2026/03/unigetui-enters-its-next-chapter-with-devolutions/) and the [official press release](https://www.globenewswire.com/news-release/2026/03/10/3253012/0/en/Devolutions-Acquires-UniGetUI-Strengthening-Security-and-Enterprise-Readiness.html).
-
-## Table of contents
- - **[UniGetUI Homepage](https://devolutions.net/unigetui/)**
- - [Table of contents](#table-of-contents)
- - [Installation](#installation)
- - [Update UniGetUI](#update-unigetui)
- - [Project stewardship](#project-stewardship)
- - [Features](#features)
- - [Package Managers](#package-managers)
- - [Translations](TRANSLATION.md)
- - [Contributors](#contributors)
- - [Screenshots](#screenshots)
- - [Frequently Asked Questions](#frequently-asked-questions)
- - [CLI reference](docs/CLI.md)
- - [IPC reference](docs/IPC.md)
-
-## Installation
-<p>There are multiple ways to install UniGetUI — choose whichever one you prefer!</p>
- 
-### Microsoft Store installation (recommended)
-<a href="https://apps.microsoft.com/detail/xpfftq032ptphf"><img alt="alt_text" width="240px" src="https://get.microsoft.com/images/en-us%20dark.svg" /></a> 
-
- 
-### Download UniGetUI installer:
-![GitHub Release](https://img.shields.io/github/v/release/Devolutions/UniGetUI?style=for-the-badge)
-<p align="left"><b><a href="https://github.com/Devolutions/UniGetUI/releases/latest/download/UniGetUI.Installer.exe">Click here to download UniGetUI</a></b></p>
-
-
-### Install UniGetUI via WinGet:
-![WinGet Package Version](https://img.shields.io/winget/v/Devolutions.UniGetUI?style=for-the-badge)
-```cmd
-winget install --exact --id Devolutions.UniGetUI --source winget
+#### Microsoft Store (Recommended)
+```
+[Store Link Coming Soon]
 ```
 
+#### Download Installer
+**[Download Latest Release](https://github.com/VpkDevs/unigetuiclone2/releases)** – PackageHub.Installer.exe
 
-### Install UniGetUI via Scoop:
-![Scoop version](https://img.shields.io/scoop/v/unigetui?bucket=extras&style=for-the-badge)
-```cmd
+#### Via WinGet
+```powershell
+winget install --exact --id APPYness.PackageHub
+```
+
+#### Via Scoop
+```powershell
 scoop bucket add extras
-scoop install extras/unigetui
+scoop install extras/packagehub
 ```
 
-### Install UniGetUI via Chocolatey:
-![Chocolatey Version](https://img.shields.io/chocolatey/v/wingetui?style=for-the-badge)
-```cmd
-choco install wingetui
+#### Via Chocolatey
+```powershell
+choco install packagehub
 ```
 
+### First Launch
 
-## Update UniGetUI
+1. Open PackageHub
+2. Ensure your package managers are installed (WinGet, Scoop, Chocolatey, etc.)
+3. Click **Scan** to discover available packages
+4. Start managing with joy! 🎉
 
-UniGetUI has a built-in autoupdater. However, it can also be updated like any other package within UniGetUI (since UniGetUI is available from WinGet, Scoop and Chocolatey).
+---
 
+## 🎯 Core Features
 
-## Features
+### 📊 Package Discovery & Management
+- Search across all configured package managers simultaneously
+- View detailed package metadata: publisher, version, size, dependencies
+- Compare packages across managers
+- Sort and filter by any criteria
 
- - Install, update, and remove software from your system easily at one click: UniGetUI combines the packages from the most used package managers for windows: Winget, Chocolatey, Scoop, Pip, Npm, Bun and .NET Tool.
- - Discover new packages and filter them to easily find the package you want.
- - View detailed metadata about any package before installing it. Get the direct download URL or the name of the publisher, as well as the size of the download.
- - Easily bulk-install, update, or uninstall multiple packages at once selecting multiple packages before performing an operation
- - Automatically update packages, or be notified when updates become available. Skip versions or completely ignore updates on a per-package basis.
- - The system tray icon will also show the available updates and installed packages, to efficiently update a program or remove a package from your system.
- - Easily customize how and where packages are installed. Select different installation options and switches for each package. Install an older version or force to install a 32 bit architecture. \[But don't worry, those options will be saved for future updates for this package*]
- - Share packages with your friends using generated package links.
- - Export custom lists of packages to then import them to another machine and install those packages with previously specified, custom installation parameters. Setting up machines or configuring a specific software setup has never been easier.
- - Backup your packages to a local file to easily recover your setup in a matter of seconds when migrating to a new machine*
+### ⚙️ Advanced Installation Options
+- **Custom Installation Parameters** – Choose installation directory, architecture (32/64-bit), and custom flags
+- **Version Selection** – Install specific versions or stay on latest
+- **Upgrade Strategy** – Auto-update, manual updates, or skip specific packages
+- **Batch Operations** – Install, update, or remove dozens of packages in one click
 
-## Package Managers
+### 📦 Package Management
+- **Automatic Updates** – Keep everything current with one-click bulk updates
+- **Version Pinning** – Lock specific packages to prevent unwanted upgrades
+- **Dependency Resolution** – Automatic handling of package dependencies
+- **Package Sharing** – Generate shareable links for your favorite packages
 
-**NOTE:** All package managers do support basic install, update, and uninstall processes, as well as checking for updates, finding new packages, and retrieving details from a package.
+### 💾 Backup & Migration
+- **Export Configurations** – Save your entire package setup as JSON
+- **Import Configurations** – Quickly restore on new machines with preserved installation parameters
+- **Settings Backup** – Full app configuration backup and restore
 
-![image](media/supported-managers.svg)
+### 🌐 System Tray Integration
+- **Quick Access** – Minimize to system tray for quick package management
+- **Update Notifications** – Get notified when updates are available
+- **Background Updates** – Optional automatic update checking
 
-✅: Supported on UniGetUI<br>
-☑️: Not directly supported but can be easily achieved<br>
-⚠️: May not work in some cases<br>
-❌: Not supported by the Package Manager<br>
-<br>
+---
 
-## Translations
+## 📋 Supported Package Managers
 
-UniGetUI translations are maintained directly in this repository. For the current language list, completion status, and per-language contributor attributions, see [TRANSLATION.md](TRANSLATION.md). If you spot a translation issue or want to improve a locale, please open an issue or submit a pull request.
+| Manager | Install | Update | Uninstall | Upgrade All | Search | Details | Version Selection |
+|---------|---------|--------|-----------|-------------|--------|---------|-------------------|
+| **WinGet** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Scoop** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Chocolatey** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Python (pip)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **npm / Node** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **.NET Tools** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **PowerShell Gallery** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Cargo (Rust)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Vcpkg (C++)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-## Screenshots
- 
-![image](media/UniGetUI_1.png)
+---
 
-![image](media/UniGetUI_2.png)
+## 🏗️ Architecture
 
-![image](media/UniGetUI_3.png)
+PackageHub follows a **modern, modular architecture** designed for extensibility and maintainability:
 
-![image](media/UniGetUI_4.png)
+```
+PackageHub/
+├── Interface Layer (WinUI 3 XAML)
+├── Core Services (Settings, Logging, Localization, Icons)
+├── Package Engine (Interfaces, Base Classes, Manager Implementations)
+├── Operations Layer (Install, Update, Uninstall, Search)
+└── Helper Services (Details, Operations, Source Management)
+```
 
-![image](media/UniGetUI_5.png)
+**Key Technologies:**
+- **UI Framework:** WinUI 3 (Windows App SDK)
+- **Runtime:** .NET 10
+- **Language:** C# with latest features (nullable annotations enabled)
+- **Build System:** Modern project SDK with code analysis
+- **Testing:** xUnit with comprehensive test coverage
+- **Code Style:** Strict enforcement via DeepSource and EditorConfig
 
-![image](media/UniGetUI_6.png)
+---
 
-![image](media/UniGetUI_7.png)
+## 📖 Documentation
 
-![image](media/UniGetUI_8.png)
+- **[Architecture Guide](docs/ARCHITECTURE.md)** – Deep dive into the codebase structure
+- **[Adding Package Managers](docs/ADD_MANAGER.md)** – Step-by-step guide for new manager integrations
+- **[CLI Reference](docs/CLI.md)** – Command-line interface documentation
+- **[IPC Reference](docs/IPC.md)** – Inter-process communication API
+- **[Contributing Guide](CONTRIBUTING.md)** – How to contribute to PackageHub
+- **[Translations](TRANSLATION.md)** – Help translate PackageHub into your language
 
-![image](media/UniGetUI_9.png)
+---
 
-![image](media/UniGetUI_10.png)
+## 🤝 Contributing
 
+We ❤️ contributions! Whether it's bug reports, feature requests, translations, or code contributions, your involvement helps us develop more joy.
 
-## Contributions
-UniGetUI continues to grow thanks to its community of contributors. Devolutions is grateful to everyone who contributes code, translations, documentation, testing, and feedback to the project.<br><br>
+### Getting Started with Development
 
-[![Contributors](https://contrib.rocks/image?repo=Devolutions/UniGetUI)](https://github.com/Devolutions/UniGetUI/graphs/contributors)<br><br>
+```bash
+# Clone the repository
+git clone https://github.com/VpkDevs/unigetuiclone2.git
+cd unigetuiclone2
 
+# Restore dependencies
+dotnet restore
 
-## Frequently asked questions
+# Run tests
+dotnet test --verbosity quiet --nologo
 
-**Q: I am unable to install or upgrade a specific Winget package! What should I do?**<br>
+# Build the project
+dotnet build src/UniGetUI/UniGetUI.csproj
 
-A: This is likely an issue with Winget rather than UniGetUI. 
+# Publish release
+dotnet publish src/UniGetUI/UniGetUI.csproj /p:Configuration=Release /p:Platform=x64
+```
 
-Please check if it's possible to install/upgrade the package through PowerShell or the Command Prompt by using the commands `winget upgrade` or `winget install`, depending on the situation (for example: `winget upgrade --id Microsoft.PowerToys`). 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
 
-If this doesn't work, consider asking for help at [Winget's project page](https://github.com/microsoft/winget-cli).<br>
+---
 
-#
+## 🌍 Translations
 
-**Q: The name of a package is trimmed with ellipsis — how do I see its full name/id?**<br>
+PackageHub is available in 20+ languages thanks to our amazing community translators. Help us reach more users:
 
-A: This is a known limitation of Winget. 
+- **[View Translation Status](TRANSLATION.md)**
+- **[Contribute a Translation](TRANSLATION.md#contributing-translations)**
 
-For more details, see this issue: https://github.com/microsoft/winget-cli/issues/2603.<br>
+---
 
-#
+## 📸 Screenshots
 
-**Q: My antivirus is telling me that UniGetUI is a virus! / My browser is blocking the download of UniGetUI!**<br>
+### Main Dashboard
+![PackageHub Dashboard](media/packagehub-dashboard.png)
 
-A: A common reason apps (i.e., executables) get blocked and/or detected as a virus — even when there's nothing malicious about them, like in the case of UniGetUI — is because a relatively large amount of people are not using them.
+### Package Search & Details
+![Package Search](media/packagehub-search.png)
 
-Combine that with the fact that you might be downloading something recently released, and blocking unknown apps is in many cases a good precaution to take to prevent actual malware.
+### Installation Options
+![Installation Options](media/packagehub-install.png)
 
-Since UniGetUI is open source and safe to use, whitelist the app in the settings of your antivirus/browser.<br>
+### Bulk Operations
+![Bulk Updates](media/packagehub-bulk.png)
 
-#
+*[View more screenshots](media/)*
 
-**Q: Are Winget/Scoop packages safe?**<br>
+---
 
-A: UniGetUI, Microsoft, and Scoop aren't responsible for the packages available for download, which are provided by third parties and can theoretically be compromised.
+## ⚙️ System Requirements
 
-Microsoft has implemented a few checks for the software available on Winget to mitigate the risks of downloading malware. Even so, it's recommended that you only download software from trusted publishers. 
+- **OS:** Windows 10 (19041) or Windows 11
+- **Runtime:** .NET 10 Runtime (automatically installed)
+- **Memory:** 512 MB minimum (1 GB recommended)
+- **Disk Space:** ~200 MB for installation
 
-<br><p align="center"><i>Check out the <a href="https://github.com/Devolutions/UniGetUI/wiki">Wiki</a> for more information!</i></p>
+### Optional Dependencies
+- **Microsoft Visual C++ Redistributable** (for MSI deployment)
+- **Microsoft Edge WebView Runtime** (for MSI deployment)
 
-## Command-line interface:
+---
 
-Check out the CLI reference [here](docs/CLI.md) and the IPC reference [here](docs/IPC.md).
+## 🔒 Security
+
+PackageHub is open source and thoroughly reviewed. If you discover a security issue, please report it responsibly at [security@appyness.dev](mailto:security@appyness.dev) rather than opening a public issue.
+
+**Disclaimer:** PackageHub is not affiliated with any of the package managers it integrates with. Packages are provided by third-party sources—always review publishers and sources before installation.
+
+---
+
+## 📄 License
+
+PackageHub is released under the **MIT License**. See [LICENSE](LICENSE) for details.
+
+---
+
+## 👏 Credits
+
+**Original Creator:** Martí Climent  
+**Current Steward & Lead Developer:** Vincent Kinney (APPYness)  
+**Company:** [APPYness](https://appyness.dev) — *Developing Joy!*
+
+### Thanks To
+- The amazing open-source community
+- All translators contributing to internationalization
+- Package manager maintainers (WinGet, Scoop, Chocolatey, etc.)
+- Everyone reporting issues and suggesting improvements
+
+---
+
+## 🌟 Status
+
+![Build Status](https://img.shields.io/github/actions/workflow/status/VpkDevs/unigetuiclone2/dotnet-test.yml?branch=main&style=for-the-badge)
+![Latest Release](https://img.shields.io/github/v/release/VpkDevs/unigetuiclone2?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+![Downloads](https://img.shields.io/github/downloads/VpkDevs/unigetuiclone2/total?style=for-the-badge)
+
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://appyness.dev">APPYness</a><br>
+  <strong>Developing Joy!</strong>
+</p>
