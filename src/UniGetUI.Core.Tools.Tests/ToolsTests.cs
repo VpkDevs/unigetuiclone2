@@ -47,6 +47,27 @@ namespace UniGetUI.Core.Tools.Tests
             Assert.Equal("", result.Item2);
         }
 
+        [Fact]
+        public async Task LaunchBatchFileRejectsNonBatchFiles()
+        {
+            string path = Path.GetTempFileName();
+            try
+            {
+                await Assert.ThrowsAsync<ArgumentException>(() => CoreTools.LaunchBatchFile(path));
+            }
+            finally
+            {
+                File.Delete(path);
+            }
+        }
+
+        [Fact]
+        public async Task LaunchBatchFileRejectsMissingBatchFiles()
+        {
+            string path = Path.Combine(Path.GetTempPath(), $"{Guid.NewGuid()}.cmd");
+            await Assert.ThrowsAsync<FileNotFoundException>(() => CoreTools.LaunchBatchFile(path));
+        }
+
         [Theory]
         [InlineData("7zip19.00-helpEr", "7zip19.00 HelpEr")]
         [InlineData("packagename", "Packagename")]

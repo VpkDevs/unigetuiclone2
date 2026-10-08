@@ -212,39 +212,38 @@ namespace UniGetUI.Core.Tools
         /// Launches a .bat or .cmd file for the given filename
         /// </summary>
         /// <param name="path">The path of the batch file</param>
-        /// <param name="WindowTitle">The title of the window</param>
+        /// <param name="WindowTitle">Retained for compatibility; the shell-associated application controls the window title.</param>
         /// <param name="RunAsAdmin">Whether the batch file should be launched elevated or not</param>
         public static async Task LaunchBatchFile(string path, string WindowTitle = "", bool RunAsAdmin = false)
         {
+            if (string.IsNullOrWhiteSpace(path))
+                throw new ArgumentException("A batch file path is required.", nameof(path));
+
+            string fullPath = Path.GetFullPath(path);
+            string extension = Path.GetExtension(fullPath);
+            if (!extension.Equals(".bat", StringComparison.OrdinalIgnoreCase)
+                && !extension.Equals(".cmd", StringComparison.OrdinalIgnoreCase))
+                throw new ArgumentException("Only .bat and .cmd files can be launched.", nameof(path));
+
+            if (!File.Exists(fullPath))
+                throw new FileNotFoundException("The batch file does not exist.", fullPath);
+
             try
             {
-                using Process p = new();
-                p.StartInfo.FileName = "cmd.exe";
-                if (RunAsAdmin)
+                ProcessStartInfo startInfo = new()
                 {
-                    // If RunAsAdmin is true, we must use ShellExecute for the "runas" verb.
-                    // When UseShellExecute is true, we cannot use ArgumentList.
-                    p.StartInfo.Arguments = "/C start \"\" \"" + path.Replace("\"", "\"\"") + "\"";
-                    p.StartInfo.UseShellExecute = true;
-                    p.StartInfo.Verb = "runas";
-                }
-                else
-                {
-                    p.StartInfo.ArgumentList.Add("/C");
-                    p.StartInfo.ArgumentList.Add("start");
-                    p.StartInfo.ArgumentList.Add(WindowTitle);
-                    p.StartInfo.ArgumentList.Add(path);
-                    p.StartInfo.UseShellExecute = false;
-                }
-
-                p.StartInfo.CreateNoWindow = true;
-                p.Start();
-                await p.WaitForExitAsync();
+                    FileName = fullPath,
+                    UseShellExecute = true,
+                    Verb = RunAsAdmin ? "runas" : string.Empty
+                };
+                using Process? process = Process.Start(startInfo);
             }
             catch (Exception ex)
             {
                 Logger.Error(ex);
             }
+
+            await Task.CompletedTask;
         }
 
         /// <summary>
